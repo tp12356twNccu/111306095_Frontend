@@ -27,6 +27,18 @@
   <link href="css/style.css" rel="stylesheet" />
   <!-- responsive style -->
   <link href="css/responsive.css" rel="stylesheet" />
+<script>
+function playAudio(trackSrc) {
+  var audio = document.getElementById("audioPlayer");
+  
+  // Set the source based on the parameter passed to the function
+  audio.src = trackSrc;
+  
+  // Play the audio
+  audio.play();
+}
+</script>
+
 </head>
 
 <body>
@@ -35,9 +47,9 @@
     <header class="header_section">
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg custom_nav-container pt-3">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="https://www.youtube.com/">
             <span>
-              Esigned
+              Youtube
             </span>
           </a>
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -93,21 +105,20 @@
                   <div class="detail-box">
                     <div>
                       <h2>
-                        welcome to
+                        Bayern-Fans United
 
                       </h2>
                       <h1>
-                        web agency
+                        Stern des Südens
                       </h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
+                        Official fan song of FC Bayern München
                       </p>
-                      <div class="">
-                        <a href="">
-                          Contact us
-                        </a>
-                      </div>
+                      <audio id="audioPlayer">
+                    
+                        Your browser does not support the audio element.
+                      </audio>
+                      <button onclick="playAudio('../Bayern Stern des Sudens.mp3')">Play Music 1</button>
                     </div>
                   </div>
                 </div>
@@ -119,21 +130,20 @@
                   <div class="detail-box">
                     <div>
                       <h2>
-                        welcome to
+                        Andrew White feat. Harry
 
                       </h2>
                       <h1>
-                        web agency
+                        FC Bayern-Forever Number One
                       </h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
+                        Official Team song of FC Bayern München
                       </p>
-                      <div class="">
-                        <a href="">
-                          Contact us
-                        </a>
-                      </div>
+                      <audio id="audioPlayer">
+                        Your browser does not support the audio element.
+                      </audio>
+                      <button onclick="playAudio('../FC Bayern - Forever Number One.mp3')">Play Music 2</button>
+
                     </div>
                   </div>
                 </div>
@@ -145,21 +155,20 @@
                   <div class="detail-box">
                     <div>
                       <h2>
-                        welcome to
-
+                        The White Stripes
                       </h2>
                       <h1>
-                        web agency
+                        Seven Nation Army [The Glitch Mob Remix]
                       </h1>
                       <p>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut
-                        labore
+                        Trailor music of Battlefield 1
                       </p>
-                      <div class="">
-                        <a href="">
-                          Contact us
-                        </a>
-                      </div>
+                      <audio id="audioPlayer">
+                   
+                        Your browser does not support the audio element.
+                      </audio>
+                      <button onclick="playAudio('../Seven Nation Army.mp3')">Play Music 3</button>
+
                     </div>
                   </div>
                 </div>
@@ -459,6 +468,11 @@
                     <input type="text" placeholder="Full Name ">
                   </div>
                   <div>
+                    <select name="phoneNumberPrefix">
+                      <option value="886">Taiwan(+886)</option>
+                      <option value="49">Germany(+49)</option>
+                      <option value="33">France(+33)</option> 
+                    </select>
                     <input type="text" placeholder="Phone Number">
                   </div>
                   <div>
@@ -466,6 +480,9 @@
                   </div>
                   <div>
                     <input type="text" placeholder="Message" class="input_message">
+                  </div>
+                  <div>
+                    <input type="date" id="inputDate" name="inputDate">
                   </div>
                   <div class="d-flex justify-content-center">
                     <button type="submit" class="btn_on-hover">
